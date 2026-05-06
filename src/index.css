@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-creepy: "Creepster", cursive;
+  --font-mono: "Space Mono", monospace;
+  
+  --color-moth-black: #0a0a0f;
+  --color-moth-dark: #131320;
+  --color-moth-card: #1a1a2e;
+  --color-moth-red: #dc2626;
+  --color-moth-glow: #ff3333;
+  --color-moth-ember: #b91c1c;
+  --color-moth-fog: #2a2a3e;
+  --color-moth-mist: #9ca3af;
+  --color-moth-light: #e5e7eb;
+  --color-moth-moon: #fef3c7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-moth-black);
+  color: var(--color-moth-light);
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* === RED EYE GLOW ANIMATION === */
+.eyes-glow {
+  animation: eyePulse 3s ease-in-out infinite;
+}
+
+@keyframes eyePulse {
+  0%, 100% { 
+    filter: drop-shadow(0 0 8px rgba(220, 38, 38, 0.6)) drop-shadow(0 0 20px rgba(220, 38, 38, 0.3));
+  }
+  50% { 
+    filter: drop-shadow(0 0 20px rgba(255, 51, 51, 1)) drop-shadow(0 0 60px rgba(255, 51, 51, 0.6)) drop-shadow(0 0 100px rgba(255, 51, 51, 0.3));
+  }
+}
+
+/* === GLITCH TEXT === */
+.glitch {
+  position: relative;
+  color: var(--color-moth-light);
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.glitch::before {
+  left: 2px;
+  text-shadow: -2px 0 var(--color-moth-red);
+  background: var(--color-moth-black);
+  animation: glitch-1 2.5s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+  left: -2px;
+  text-shadow: 2px 0 var(--color-moth-glow);
+  background: var(--color-moth-black);
+  animation: glitch-2 3s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-1 {
+  0% { clip-path: inset(20% 0 80% 0); }
+  20% { clip-path: inset(60% 0 10% 0); }
+  40% { clip-path: inset(40% 0 50% 0); }
+  60% { clip-path: inset(80% 0 5% 0); }
+  80% { clip-path: inset(10% 0 70% 0); }
+  100% { clip-path: inset(30% 0 20% 0); }
+}
+
+@keyframes glitch-2 {
+  0% { clip-path: inset(10% 0 60% 0); }
+  20% { clip-path: inset(30% 0 20% 0); }
+  40% { clip-path: inset(70% 0 10% 0); }
+  60% { clip-path: inset(20% 0 50% 0); }
+  80% { clip-path: inset(50% 0 30% 0); }
+  100% { clip-path: inset(5% 0 80% 0); }
+}
+
+/* === SCROLLING MARQUEE === */
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  background: linear-gradient(90deg, var(--color-moth-ember), var(--color-moth-red), var(--color-moth-ember));
+  color: var(--color-moth-black);
+  font-family: "Creepster", cursive;
+  font-weight: 400;
+  padding: 0.4rem 0;
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+}
+
+.marquee-track {
+  display: inline-flex;
+  animation: marquee 30s linear infinite;
+}
+
+.marquee-content {
+  display: inline-block;
+  padding: 0;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* === FLOATING PARTICLES === */
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(220,38,38,0.4), transparent 70%);
+  pointer-events: none;
+  animation: floatParticle linear infinite;
+}
+
+@keyframes floatParticle {
+  0% { transform: translateY(100vh) scale(0); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 0.6; }
+  100% { transform: translateY(-10vh) scale(1); opacity: 0; }
+}
+
+/* === FOG EFFECT === */
+.fog-layer {
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(42, 42, 62, 0.15) 20%,
+    rgba(42, 42, 62, 0.25) 50%,
+    rgba(42, 42, 62, 0.15) 80%,
+    transparent 100%
+  );
+  animation: driftFog 20s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes driftFog {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0%); }
+}
+
+/* === SCROLLBAR === */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-moth-black);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-moth-red);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-moth-glow);
+}
