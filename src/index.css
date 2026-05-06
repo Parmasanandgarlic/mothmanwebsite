@@ -6,8 +6,8 @@
   --font-mono: "Space Mono", monospace;
   
   --color-moth-black: #0a0a0f;
-  --color-moth-dark: #131320;
-  --color-moth-card: #1a1a2e;
+  --color-moth-dark: #111118;
+  --color-moth-card: #171722;
   --color-moth-red: #dc2626;
   --color-moth-glow: #ff3333;
   --color-moth-ember: #b91c1c;
@@ -15,6 +15,11 @@
   --color-moth-mist: #9ca3af;
   --color-moth-light: #e5e7eb;
   --color-moth-moon: #fef3c7;
+  --color-moth-pine: #1a2e1a;
+  --color-moth-forest: #0d1f0d;
+  --color-moth-lodge: #2c1810;
+  --color-moth-amber: #d4a039;
+  --color-moth-sepia: #a89070;
 }
 
 * {

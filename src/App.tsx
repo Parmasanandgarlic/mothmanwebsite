@@ -60,14 +60,6 @@ function FloatingParticles() {
   );
 }
 
-function EyeGlow() {
-  return (
-    <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-20">
-      <div className="eyes-glow w-4 h-4 rounded-full bg-moth-glow absolute" style={{ top: '35%', left: '46%' }} />
-      <div className="eyes-glow w-4 h-4 rounded-full bg-moth-glow absolute" style={{ top: '35%', left: '52%' }} />
-    </div>
-  );
-}
 
 export default function App() {
   const [copied, setCopied] = useState(false);
@@ -210,41 +202,41 @@ export default function App() {
         </section>
 
         {/* LORE */}
-        <section id="lore" className="py-20 px-6 bg-moth-dark border-y-2 border-moth-fog/30 relative overflow-hidden scroll-mt-20">
-          <div className="fog-layer opacity-30" />
+        <section id="lore" className="py-20 px-6 border-y-2 border-moth-fog/30 relative overflow-hidden scroll-mt-20" style={{ background: 'linear-gradient(180deg, #0d1f0d 0%, #111118 40%, #111118 100%)' }}>
+          <div className="fog-layer opacity-40" />
           <div className="max-w-4xl mx-auto relative z-10">
-            <div className="flex flex-col md:flex-row gap-12 items-center">
-              <div className="flex-1 space-y-6">
-                <h2 className="text-4xl md:text-5xl font-creepy text-moth-light uppercase">
-                  The <span className="text-moth-red">Legend</span>
-                </h2>
-                <div className="space-y-4 text-moth-mist font-mono text-sm leading-relaxed">
-                  <p className="border-l-2 border-moth-red pl-4">{">"} November 1966 — Point Pleasant, West Virginia. Locals report a winged creature with glowing red eyes stalking the night.</p>
-                  <p className="border-l-2 border-moth-red/60 pl-4">{">"} December 1967 — The Silver Bridge collapses. 46 lives lost. Mothman was trying to warn us all along.</p>
-                  <p className="border-l-2 border-moth-red/40 pl-4">{">"} 2026 — He returns. Not to warn of bridges, but of paper hands. The prophecy continues on Solana.</p>
-                  <p className="text-moth-red font-bold text-base mt-6 font-creepy tracking-wider">{">"} THOSE WHO HOLD SHALL BE SPARED.</p>
+            <p className="text-moth-amber text-center mb-2 font-mono text-xs tracking-[0.4em] uppercase">Point Pleasant, West Virginia</p>
+            <h2 className="text-4xl md:text-5xl font-creepy text-moth-light uppercase text-center mb-2">
+              The <span className="text-moth-red">Legend</span>
+            </h2>
+            <p className="text-moth-sepia text-center mb-12 font-mono text-sm italic">&quot;Something is happening in Point Pleasant… and it is not of this world.&quot;</p>
+
+            <div className="space-y-8">
+              {[
+                { date: 'NOV 12, 1966', title: 'The First Sighting', color: 'border-moth-red', desc: 'Five gravediggers at Clendenin Cemetery report a humanoid figure lifting off from nearby trees. Described as a "brown human shape with wings." The men flee. No one believes them — yet.' },
+                { date: 'NOV 15, 1966', title: 'The TNT Area Encounter', color: 'border-moth-red/80', desc: 'Two young couples — Roger and Linda Scarberry, Steve and Mary Mallette — see a creature near the old WW2 munitions plant. Six to seven feet tall, with massive wings and glowing red eyes "like bicycle reflectors." It chases their car at over 100 mph.' },
+                { date: 'NOV-DEC 1966', title: 'The Wave', color: 'border-moth-red/60', desc: 'Over 100 residents report sightings. Strange lights in the sky. Phone lines disrupted. Dogs and livestock found mutilated. Mason County Sheriff George Johnson names the creature "Mothman" after the Batman villain.' },
+                { date: 'DEC 15, 1967', title: 'The Silver Bridge Collapse', color: 'border-moth-ember', titleColor: 'text-moth-red', desc: 'Rush-hour traffic. The Silver Bridge connecting Point Pleasant to Gallipolis, Ohio collapses into the Ohio River. 46 people perish. An eyebar chain failure — or was Mothman trying to warn them? The sightings stop after the disaster.' },
+                { date: '2002', title: 'The Prophecies of Mothman', color: 'border-moth-fog', desc: 'John Keel\'s "The Mothman Prophecies" becomes a film starring Richard Gere. Point Pleasant erects a 12-foot stainless steel Mothman statue and hosts an annual Mothman Festival. The legend becomes eternal.' },
+                { date: '2026', title: 'He Returns — On-Chain', color: 'border-moth-glow', titleColor: 'text-moth-red', desc: 'The red eyes appear once more. Not over the Ohio River, but on the Solana blockchain. $MOTH rises from the fog. Those who dismissed the signs before won\'t make the same mistake twice.' },
+              ].map((e, i) => (
+                <div key={i} className="flex gap-4 items-start">
+                  <div className="text-moth-amber font-mono text-xs whitespace-nowrap pt-1 w-24 shrink-0 text-right">{e.date}</div>
+                  <div className={`border-l-2 ${e.color} pl-4`}>
+                    <h3 className={`${e.titleColor || 'text-moth-light'} font-creepy text-lg tracking-wider mb-1`}>{e.title}</h3>
+                    <p className="text-moth-mist font-mono text-sm leading-relaxed">{e.desc}</p>
+                  </div>
                 </div>
-              </div>
-              <div className="flex-1">
-                <div className="bg-moth-black border-2 border-moth-red/30 p-6 font-mono text-moth-red/80 text-xs sm:text-sm leading-tight whitespace-pre text-center rounded-lg shadow-[0_0_40px_rgba(220,38,38,0.1)]">
-{`
-    ╱▔▔▔╲   ╱▔▔▔╲
-   ╱ ◉  ◉ ╲╱ ◉  ◉ ╲
-  ╱    ╱╲    ╱╲    ╲
- ╱   ╱    ╲╱    ╲   ╲
-╱___╱      ╲╲____╲___╲
-     ╲  ◉◉  ╱
-      ╲    ╱
-       ╲  ╱
-   ▁▁▁▁╲╱▁▁▁▁
-  ╱            ╲
- ╱  HE WATCHES  ╲
-╱________________╲`}
-                </div>
-              </div>
+              ))}
+            </div>
+
+            <div className="mt-12 bg-moth-black/60 border border-moth-amber/20 rounded-lg p-6 text-center backdrop-blur-sm">
+              <p className="text-moth-amber font-creepy text-xl tracking-wider mb-2">THOSE WHO HOLD SHALL BE SPARED.</p>
+              <p className="text-moth-sepia font-mono text-xs italic">— Inscription found carved into a tree near the TNT Area, 1967</p>
             </div>
           </div>
         </section>
+
 
         {/* SIGHTING GENERATOR */}
         <section id="sightings" className="py-20 px-6 bg-moth-black border-y-2 border-moth-red/20 relative overflow-hidden scroll-mt-20">
@@ -296,32 +288,40 @@ export default function App() {
           </div>
         </section>
 
-        {/* MEME GALLERY */}
-        <section id="memes" className="py-20 px-6 bg-moth-dark border-y-2 border-moth-fog/30 scroll-mt-20">
-          <div className="max-w-5xl mx-auto">
+        {/* EVIDENCE GALLERY */}
+        <section id="memes" className="py-20 px-6 bg-moth-dark border-y-2 border-moth-fog/30 scroll-mt-20 relative overflow-hidden">
+          <div className="fog-layer opacity-20" />
+          <div className="max-w-6xl mx-auto relative z-10">
+            <p className="text-moth-amber text-center mb-2 font-mono text-xs tracking-[0.4em] uppercase">Case File No. 1966-PP</p>
             <h2 className="text-4xl md:text-5xl font-creepy text-moth-light mb-4 uppercase text-center">
               The <span className="text-moth-red">Evidence</span>
             </h2>
-            <p className="text-moth-mist text-center mb-12 font-mono text-sm">Documented sightings. The truth is out there.</p>
+            <p className="text-moth-sepia text-center mb-12 font-mono text-sm italic">"The owls are not what they seem." — Neither is he.</p>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
               {[
+                { src: '/meme7.png', alt: 'Mothman silhouette with red eyes in forest' },
+                { src: '/meme8.png', alt: 'Blurry Mothman sky sighting photograph' },
+                { src: '/meme10.png', alt: 'Mothman emerging from fog with red eyes' },
+                { src: '/meme11.png', alt: 'Dark Mothman creature with glowing red eyes' },
+                { src: '/meme6.png', alt: 'Vintage Mothman sketch in forest' },
+                { src: '/meme9.png', alt: 'Mothman creature illustration purple sky' },
                 { src: '/meme1.png', alt: 'Mothman Epstein meme' },
                 { src: '/meme2.jpg', alt: 'Mothman catalytic converter sticker' },
-                { src: '/meme3.png', alt: 'Moth lamp meme' },
                 { src: '/meme4.jpg', alt: 'Mothman roadside sighting' },
+                { src: '/meme3.png', alt: 'Moth lamp meme' },
                 { src: '/meme5.png', alt: 'Mothman terrorize townsfolk' },
-                { src: '/meme6.png', alt: 'Vintage Mothman sighting sketch' },
+                { src: '/mothman-hero.png', alt: 'Mothman mascot' },
               ].map((img, i) => (
                 <motion.div
                   key={i}
-                  whileHover={{ scale: 1.05, rotate: Math.random() > 0.5 ? 1 : -1 }}
-                  className="bg-moth-card border-2 border-moth-fog/30 rounded-lg overflow-hidden hover:border-moth-red/50 transition-colors group"
+                  whileHover={{ scale: 1.04 }}
+                  className="film-grain bg-moth-card border border-moth-fog/20 rounded overflow-hidden hover:border-moth-red/40 transition-colors group"
                 >
                   <img
                     src={img.src}
                     alt={img.alt}
-                    className="w-full h-48 md:h-56 object-cover group-hover:brightness-110 transition-all"
+                    className="w-full h-40 md:h-48 object-cover group-hover:brightness-110 transition-all relative z-[1]"
                     loading="lazy"
                   />
                 </motion.div>
