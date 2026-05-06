@@ -166,9 +166,8 @@ export default function App() {
             className="z-10 flex flex-col items-center"
           >
             {/* Hero Image */}
-            <div className="relative mb-6">
-              <img src="/mothman-hero.png" alt="Mothman" className="w-48 h-48 md:w-64 md:h-64 object-contain eyes-glow" />
-              <EyeGlow />
+            <div className="relative mb-6 film-grain rounded-xl">
+              <img src="/mothman-hero.png" alt="Mothman" className="w-48 h-48 md:w-64 md:h-64 object-contain relative z-[1] rounded-xl" />
             </div>
 
             <h1 className="text-6xl md:text-8xl lg:text-9xl font-creepy mb-4 uppercase leading-none text-center">
