@@ -172,7 +172,11 @@ export default function App() {
             </div>
 
             <h1 className="text-6xl md:text-8xl lg:text-9xl font-creepy mb-4 uppercase leading-none text-center">
-              <span className="glitch" data-text="MOTHMAN">MOTHMAN</span>
+              <span className="cryptid-title">
+                {"MOTHMAN".split("").map((char, i) => (
+                  <span key={i} className="cryptid-letter">{char}</span>
+                ))}
+              </span>
             </h1>
             <p className="text-lg md:text-xl mb-2 text-moth-red font-creepy tracking-[0.3em] uppercase">
               $MOTH on Solana
