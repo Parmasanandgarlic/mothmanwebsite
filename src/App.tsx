@@ -1,4 +1,5 @@
 import { Copy, ExternalLink, Send, Menu, X, Eye } from 'lucide-react';
+import { Analytics } from '@vercel/analytics/react';
 
 function XIcon({ className }: { className?: string }) {
   return (
@@ -371,6 +372,7 @@ export default function App() {
         </p>
         <p className="text-moth-red/30 text-xs mt-4 font-creepy tracking-widest">HE WATCHES. HE WAITS. HE HODLS.</p>
       </footer>
+      <Analytics />
     </div>
   );
 }
