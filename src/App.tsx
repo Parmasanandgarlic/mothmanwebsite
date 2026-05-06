@@ -201,42 +201,6 @@ export default function App() {
           </motion.div>
         </section>
 
-        {/* LORE */}
-        <section id="lore" className="py-20 px-6 border-y-2 border-moth-fog/30 relative overflow-hidden scroll-mt-20" style={{ background: 'linear-gradient(180deg, #0d1f0d 0%, #111118 40%, #111118 100%)' }}>
-          <div className="fog-layer opacity-40" />
-          <div className="max-w-4xl mx-auto relative z-10">
-            <p className="text-moth-amber text-center mb-2 font-mono text-xs tracking-[0.4em] uppercase">Point Pleasant, West Virginia</p>
-            <h2 className="text-4xl md:text-5xl font-creepy text-moth-light uppercase text-center mb-2">
-              The <span className="text-moth-red">Legend</span>
-            </h2>
-            <p className="text-moth-sepia text-center mb-12 font-mono text-sm italic">&quot;Something is happening in Point Pleasant… and it is not of this world.&quot;</p>
-
-            <div className="space-y-8">
-              {[
-                { date: 'NOV 12, 1966', title: 'The First Sighting', color: 'border-moth-red', desc: 'Five gravediggers at Clendenin Cemetery report a humanoid figure lifting off from nearby trees. Described as a "brown human shape with wings." The men flee. No one believes them — yet.' },
-                { date: 'NOV 15, 1966', title: 'The TNT Area Encounter', color: 'border-moth-red/80', desc: 'Two young couples — Roger and Linda Scarberry, Steve and Mary Mallette — see a creature near the old WW2 munitions plant. Six to seven feet tall, with massive wings and glowing red eyes "like bicycle reflectors." It chases their car at over 100 mph.' },
-                { date: 'NOV-DEC 1966', title: 'The Wave', color: 'border-moth-red/60', desc: 'Over 100 residents report sightings. Strange lights in the sky. Phone lines disrupted. Dogs and livestock found mutilated. Mason County Sheriff George Johnson names the creature "Mothman" after the Batman villain.' },
-                { date: 'DEC 15, 1967', title: 'The Silver Bridge Collapse', color: 'border-moth-ember', titleColor: 'text-moth-red', desc: 'Rush-hour traffic. The Silver Bridge connecting Point Pleasant to Gallipolis, Ohio collapses into the Ohio River. 46 people perish. An eyebar chain failure — or was Mothman trying to warn them? The sightings stop after the disaster.' },
-                { date: '2002', title: 'The Prophecies of Mothman', color: 'border-moth-fog', desc: 'John Keel\'s "The Mothman Prophecies" becomes a film starring Richard Gere. Point Pleasant erects a 12-foot stainless steel Mothman statue and hosts an annual Mothman Festival. The legend becomes eternal.' },
-                { date: '2026', title: 'He Returns — On-Chain', color: 'border-moth-glow', titleColor: 'text-moth-red', desc: 'The red eyes appear once more. Not over the Ohio River, but on the Solana blockchain. $MOTH rises from the fog. Those who dismissed the signs before won\'t make the same mistake twice.' },
-              ].map((e, i) => (
-                <div key={i} className="flex gap-4 items-start">
-                  <div className="text-moth-amber font-mono text-xs whitespace-nowrap pt-1 w-24 shrink-0 text-right">{e.date}</div>
-                  <div className={`border-l-2 ${e.color} pl-4`}>
-                    <h3 className={`${e.titleColor || 'text-moth-light'} font-creepy text-lg tracking-wider mb-1`}>{e.title}</h3>
-                    <p className="text-moth-mist font-mono text-sm leading-relaxed">{e.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-12 bg-moth-black/60 border border-moth-amber/20 rounded-lg p-6 text-center backdrop-blur-sm">
-              <p className="text-moth-amber font-creepy text-xl tracking-wider mb-2">THOSE WHO HOLD SHALL BE SPARED.</p>
-              <p className="text-moth-sepia font-mono text-xs italic">— Inscription found carved into a tree near the TNT Area, 1967</p>
-            </div>
-          </div>
-        </section>
-
 
         {/* SIGHTING GENERATOR */}
         <section id="sightings" className="py-20 px-6 bg-moth-black border-y-2 border-moth-red/20 relative overflow-hidden scroll-mt-20">
@@ -326,6 +290,42 @@ export default function App() {
                   />
                 </motion.div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* LORE */}
+        <section id="lore" className="py-20 px-6 border-y-2 border-moth-fog/30 relative overflow-hidden scroll-mt-20" style={{ background: 'linear-gradient(180deg, #0d1f0d 0%, #111118 40%, #111118 100%)' }}>
+          <div className="fog-layer opacity-40" />
+          <div className="max-w-4xl mx-auto relative z-10">
+            <p className="text-moth-amber text-center mb-2 font-mono text-xs tracking-[0.4em] uppercase">Point Pleasant, West Virginia</p>
+            <h2 className="text-4xl md:text-5xl font-creepy text-moth-light uppercase text-center mb-2">
+              The <span className="text-moth-red">Legend</span>
+            </h2>
+            <p className="text-moth-sepia text-center mb-12 font-mono text-sm italic">&quot;Something is happening in Point Pleasant… and it is not of this world.&quot;</p>
+
+            <div className="space-y-8">
+              {[
+                { date: 'NOV 12, 1966', title: 'The First Sighting', color: 'border-moth-red', desc: 'Five gravediggers at Clendenin Cemetery report a humanoid figure lifting off from nearby trees. Described as a "brown human shape with wings." The men flee. No one believes them — yet.' },
+                { date: 'NOV 15, 1966', title: 'The TNT Area Encounter', color: 'border-moth-red/80', desc: 'Two young couples — Roger and Linda Scarberry, Steve and Mary Mallette — see a creature near the old WW2 munitions plant. Six to seven feet tall, with massive wings and glowing red eyes "like bicycle reflectors." It chases their car at over 100 mph.' },
+                { date: 'NOV-DEC 1966', title: 'The Wave', color: 'border-moth-red/60', desc: 'Over 100 residents report sightings. Strange lights in the sky. Phone lines disrupted. Dogs and livestock found mutilated. Mason County Sheriff George Johnson names the creature "Mothman" after the Batman villain.' },
+                { date: 'DEC 15, 1967', title: 'The Silver Bridge Collapse', color: 'border-moth-ember', titleColor: 'text-moth-red', desc: 'Rush-hour traffic. The Silver Bridge connecting Point Pleasant to Gallipolis, Ohio collapses into the Ohio River. 46 people perish. An eyebar chain failure — or was Mothman trying to warn them? The sightings stop after the disaster.' },
+                { date: '2002', title: 'The Prophecies of Mothman', color: 'border-moth-fog', desc: 'John Keel\'s "The Mothman Prophecies" becomes a film starring Richard Gere. Point Pleasant erects a 12-foot stainless steel Mothman statue and hosts an annual Mothman Festival. The legend becomes eternal.' },
+                { date: '2026', title: 'He Returns — On-Chain', color: 'border-moth-glow', titleColor: 'text-moth-red', desc: 'The red eyes appear once more. Not over the Ohio River, but on the Solana blockchain. $MOTH rises from the fog. Those who dismissed the signs before won\'t make the same mistake twice.' },
+              ].map((e, i) => (
+                <div key={i} className="flex gap-4 items-start">
+                  <div className="text-moth-amber font-mono text-xs whitespace-nowrap pt-1 w-24 shrink-0 text-right">{e.date}</div>
+                  <div className={`border-l-2 ${e.color} pl-4`}>
+                    <h3 className={`${e.titleColor || 'text-moth-light'} font-creepy text-lg tracking-wider mb-1`}>{e.title}</h3>
+                    <p className="text-moth-mist font-mono text-sm leading-relaxed">{e.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-12 bg-moth-black/60 border border-moth-amber/20 rounded-lg p-6 text-center backdrop-blur-sm">
+              <p className="text-moth-amber font-creepy text-xl tracking-wider mb-2">THOSE WHO HOLD SHALL BE SPARED.</p>
+              <p className="text-moth-sepia font-mono text-xs italic">— Inscription found carved into a tree near the TNT Area, 1967</p>
             </div>
           </div>
         </section>
