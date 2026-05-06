@@ -311,7 +311,7 @@ export default function App() {
                 { src: '/meme3.png', alt: 'Moth lamp meme' },
                 { src: '/meme4.jpg', alt: 'Mothman roadside sighting' },
                 { src: '/meme5.png', alt: 'Mothman terrorize townsfolk' },
-                { src: '/mothman-hero.png', alt: 'Mothman mascot' },
+                { src: '/meme6.png', alt: 'Vintage Mothman sighting sketch' },
               ].map((img, i) => (
                 <motion.div
                   key={i}
