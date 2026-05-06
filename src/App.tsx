@@ -125,8 +125,8 @@ export default function App() {
           <a href="#lore" className="hover:text-moth-red transition-colors uppercase tracking-wider">The Lore</a>
           <a href="#sightings" className="hover:text-moth-red transition-colors uppercase tracking-wider">Sightings</a>
           <a href="#memes" className="hover:text-moth-red transition-colors uppercase tracking-wider">Memes</a>
-          <a href="https://x.com/" target="_blank" rel="noopener noreferrer" className="hover:text-moth-red transition-colors flex items-center gap-1 uppercase tracking-wider"><XIcon className="w-4 h-4" /> Twitter</a>
-          <a href="https://t.me/" target="_blank" rel="noopener noreferrer" className="hover:text-moth-red transition-colors flex items-center gap-1 uppercase tracking-wider"><Send className="w-4 h-4" /> Telegram</a>
+          <a href="https://x.com/MothManOnSol" target="_blank" rel="noopener noreferrer" className="hover:text-moth-red transition-colors flex items-center gap-1 uppercase tracking-wider"><XIcon className="w-4 h-4" /> Twitter</a>
+          <a href="https://t.me/mothmanonsol" target="_blank" rel="noopener noreferrer" className="hover:text-moth-red transition-colors flex items-center gap-1 uppercase tracking-wider"><Send className="w-4 h-4" /> Telegram</a>
         </div>
         <div className="flex gap-3 items-center">
           <a href="https://pump.fun/" target="_blank" rel="noopener noreferrer" className="hidden sm:block">
@@ -146,8 +146,8 @@ export default function App() {
           <a href="#lore" className="hover:text-moth-red transition-colors uppercase font-bold" onClick={() => setMobileMenuOpen(false)}>The Lore</a>
           <a href="#sightings" className="hover:text-moth-red transition-colors uppercase font-bold" onClick={() => setMobileMenuOpen(false)}>Sightings</a>
           <a href="#memes" className="hover:text-moth-red transition-colors uppercase font-bold" onClick={() => setMobileMenuOpen(false)}>Memes</a>
-          <a href="https://x.com/" target="_blank" rel="noopener noreferrer" className="hover:text-moth-red transition-colors flex items-center gap-2 uppercase font-bold"><XIcon className="w-4 h-4" /> Twitter</a>
-          <a href="https://t.me/" target="_blank" rel="noopener noreferrer" className="hover:text-moth-red transition-colors flex items-center gap-2 uppercase font-bold"><Send className="w-4 h-4" /> Telegram</a>
+          <a href="https://x.com/MothManOnSol" target="_blank" rel="noopener noreferrer" className="hover:text-moth-red transition-colors flex items-center gap-2 uppercase font-bold"><XIcon className="w-4 h-4" /> Twitter</a>
+          <a href="https://t.me/mothmanonsol" target="_blank" rel="noopener noreferrer" className="hover:text-moth-red transition-colors flex items-center gap-2 uppercase font-bold"><Send className="w-4 h-4" /> Telegram</a>
           <a href="https://pump.fun/" target="_blank" rel="noopener noreferrer" className="bg-moth-red text-moth-black px-4 py-2 font-bold uppercase text-center hover:bg-moth-glow transition-colors border-2 border-moth-glow font-creepy text-lg">BUY $MOTH</a>
         </div>
       )}
@@ -283,7 +283,7 @@ export default function App() {
                   <XIcon className="w-4 h-4" /> Tweet
                 </button>
                 <button
-                  onClick={() => window.open('https://t.me/', '_blank')}
+                  onClick={() => window.open('https://t.me/mothmanonsol', '_blank')}
                   className="flex-1 min-w-[90px] bg-moth-card text-moth-light px-3 py-2 font-bold uppercase text-sm hover:bg-moth-red hover:text-moth-black transition-all border border-moth-fog/50 rounded flex items-center justify-center gap-2"
                 >
                   <Send className="w-4 h-4" /> TG
@@ -359,8 +359,8 @@ export default function App() {
       {/* FOOTER */}
       <footer className="border-t-2 border-moth-fog/30 bg-moth-dark p-8 text-center">
         <div className="flex justify-center gap-6 mb-6">
-          <a href="https://x.com/" target="_blank" rel="noopener noreferrer" className="text-moth-mist hover:text-moth-red transition-colors uppercase font-bold flex items-center gap-1 text-sm"><XIcon className="w-5 h-5" /> Twitter</a>
-          <a href="https://t.me/" target="_blank" rel="noopener noreferrer" className="text-moth-mist hover:text-moth-red transition-colors uppercase font-bold flex items-center gap-1 text-sm"><Send className="w-5 h-5" /> Telegram</a>
+          <a href="https://x.com/MothManOnSol" target="_blank" rel="noopener noreferrer" className="text-moth-mist hover:text-moth-red transition-colors uppercase font-bold flex items-center gap-1 text-sm"><XIcon className="w-5 h-5" /> Twitter</a>
+          <a href="https://t.me/mothmanonsol" target="_blank" rel="noopener noreferrer" className="text-moth-mist hover:text-moth-red transition-colors uppercase font-bold flex items-center gap-1 text-sm"><Send className="w-5 h-5" /> Telegram</a>
           <a href="https://pump.fun/" target="_blank" rel="noopener noreferrer" className="text-moth-mist hover:text-moth-red transition-colors uppercase font-bold flex items-center gap-1 text-sm"><ExternalLink className="w-5 h-5" /> Pump.Fun</a>
         </div>
         <p className="text-moth-mist/50 text-xs max-w-2xl mx-auto font-mono">
